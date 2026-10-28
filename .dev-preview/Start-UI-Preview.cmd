@@ -1,9 +1,9 @@
 @echo off
 setlocal
-title ROSE UI Workshop - close this window to stop
+title RO_ThemeEditor - close this window to stop
 cd /d "%~dp0"
 echo.
-echo  ROSE UI Workshop - local development preview
+echo  RO_ThemeEditor - local development preview
 echo.
 echo  Keep this console window open while using the workshop.
 echo  Close this window or press Ctrl+C to stop the preview server.
@@ -53,7 +53,7 @@ exit /b %previewExitCode%
 
 :node_required
 echo.
-echo  Cannot start ROSE UI Workshop.
+echo  Cannot start RO_ThemeEditor.
 echo  %nodeProblem%
 echo.
 echo  Please install Node.js 22 or newer first:

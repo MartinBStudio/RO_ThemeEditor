@@ -1,7 +1,8 @@
-# ROSE UI Workshop
+# RO_ThemeEditor
 
-Local browser development environment for the theme folders in this repository.
-It runs the actual RmlUi 6.1 layout engine and OpenGL renderer as WebAssembly / WebGL 2.
+Edit and preview ROSE Online themes without launching the game client. This local
+browser development environment runs the actual RmlUi 6.1 layout engine and OpenGL
+renderer as WebAssembly / WebGL 2.
 The compiled engine is included, so everyday use does not need a C++ compiler,
 Emscripten, a ROSE server, or the running game.
 

@@ -286,13 +286,13 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
     // Windows sends SIGHUP when this console is closed. Exit promptly so open
     // browser connections and filesystem watchers cannot keep the server alive.
     for (const signal of ['SIGINT','SIGTERM','SIGHUP']) process.once(signal, () => {
-      console.log('\nStopping ROSE UI Workshop.');
+      console.log('\nStopping RO_ThemeEditor.');
       server.closeAllConnections();
       process.exit(0);
     });
     listenAvailable(server, port).then(actualPort => {
       const url = `http://127.0.0.1:${actualPort}`;
-      console.log(`\nROSE UI development preview: ${url}\nBase assets: ${base || 'Not found — pass --base <assets-folder>'}\nSave HTML, RCSS, textures, or mock-data.json to reload. Ctrl+C stops the server.\n`);
+      console.log(`\nRO_ThemeEditor: ${url}\nBase assets: ${base || 'Not found — pass --base <assets-folder>'}\nSave HTML, RCSS, textures, or mock-data.json to reload. Ctrl+C stops the server.\n`);
       if (args.includes('--open')) {
         if (process.platform === 'win32') spawn('rundll32.exe',['url.dll,FileProtocolHandler',url],{windowsHide:true,stdio:'ignore'}).unref();
         else spawn(process.platform === 'darwin' ? 'open' : 'xdg-open',[url],{stdio:'ignore'}).unref();
